@@ -27,10 +27,10 @@ class MyTimer:
         self._target(*self._args, **self._kwargs)
 
     def start(self):
-        
+
         self._timer = threading.Timer(self._tempo, self._run)
         self._timer.start()
-    
+
     def stop(self):
         self._timer.cancel()
 
@@ -126,10 +126,10 @@ class Lift:
         if self.curMouvement == '+' or self.curMouvement=='-' or self.curMouvement== 'p':
             self.CurTempo=self.CurTempo+1
         if self.CurTempo == 50 or self.CurTempo==0:
-            
+
             if self.curMouvement=='p':
                 self.curMouvement='0'
-            
+
 
             if self.curMouvement=='+':
                 self.CurEtage=self.CurEtage+1
@@ -167,8 +167,8 @@ class Lift:
                         self.CurServed=0
                     else:
                         self.CurServed=self.CurServed+1
-    
-                        
+
+
     def UpdateColor(self):
 #        print "UpdateColor", self.curMouvement, self.CurEtage
         if self.curMouvement=='0':
@@ -361,7 +361,7 @@ class Elevator:
         self.button4.pack()
  
         self.button3 = ttk.Button(self.frame, text = '#_3_#')
-        self.button3.configure(style="Green.TButton") 
+        self.button3.configure(style="Green.TButton")
         self.button3.pack()
 
         self.button2 = ttk.Button(self.frame, text = '#_2_#')
@@ -382,7 +382,7 @@ class Elevator:
         self.button5.pack()
 
     def Bleu5(self):
-    
+
         self.button5.configure(style="Blue.TButton")
         self.button5.pack()
     
